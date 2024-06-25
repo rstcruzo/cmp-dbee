@@ -27,7 +27,7 @@ function source:complete(_, callback)
 end
 
 function source:is_available()
-  return is_available
+  return dbee.api.core.is_loaded() and dbee.api.ui.is_loaded()
 end
 
 function source:get_trigger_characters()
