@@ -23,7 +23,7 @@ function source:get_handler()
 end
 
 function source:complete(_, callback)
-  local items = self.get_handler():get_completion()
+  local items = self:get_handler():get_completion()
   callback {
     items = items,
     isIncomplete = false,
