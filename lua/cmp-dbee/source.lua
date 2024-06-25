@@ -8,7 +8,7 @@ local is_available = dbee.api.core.is_loaded() and dbee.api.ui.is_loaded()
 --- Constructor for nvim-cmp source
 ---@param cfg Config
 function source:new(cfg)
-  local cls = { handler = handler:new(cfg, is_available) }
+  local cls = { handler = handler:new(cfg, true) }
   setmetatable(cls, self)
   self.__index = self
   return cls
